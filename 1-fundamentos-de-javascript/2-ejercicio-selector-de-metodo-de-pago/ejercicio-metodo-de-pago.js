@@ -1,5 +1,5 @@
 /*
-EJERCICIO 2: Selector de método de pago 💳
+EJERCICIO 2: Selector de método de pago
 
 DIFICULTAD: (1/5)
 
@@ -57,6 +57,6 @@ PISTAS SOLO SI TE TRABAS:
     sea realmente un número, no un string.
     
     2. No olvides el break; al final de cada case, o el código "caerá" al siguiente caso (esto se llama fall-through).
-    
+
     3. El default no necesita break si está al final, pero es buena práctica igual ponerlo por claridad.
 */
