@@ -68,36 +68,38 @@ PISTAS SOLO SI TE TRABAS:
     4. Number() es tu amigo para la conversión de tipos.
 */ 
 
-function calcularPrecioEntrada(edad){
+function calcularPrecioEntrada(){
 
-if (edad <= 12 ) {
-    return edad = 5
+    edad = prompt("dime tu edad");
 
-    }
+    if (edad <= 12 ) {
 
-else if(edad <= 17) {
-    alert("El precio de tu entrada es: $8")
-    
-    }
+        alert("El precio de tu entrada es: $5")
 
-else if(edad <= 64) {
-    alert("El precio de tu entrada es: $12")
+        }
 
-    }
+        else if(edad <= 17) {
 
-else if(edad >= 65) {
-    alert("El precio de tu entrada es: $6")
-    }
+            alert("El precio de tu entrada es: $8")
+        
+            }
 
-else{
-    alert("El precio de tu entrada es: $12")
+        else if(edad <= 64) {
 
+            alert("El precio de tu entrada es: $12")
+
+            }
+
+        else if(edad <= 65) {
+
+            alert("El precio de tu entrada es: $6")
+            }
+
+        else{
+
+            alert("El precio de tu entrada es: $12")
+
+        }
 }
 
-}
-
-prompt("dime tu edad");
-
-calcularPrecioEntrada(edad);
-
-alert("El precio de tu entrada es" + Number(edad));
+calcularPrecioEntrada();
