@@ -70,36 +70,40 @@ PISTAS SOLO SI TE TRABAS:
 
 function calcularPrecioEntrada(){
 
-    edad = prompt("dime tu edad");
+    let edad = prompt("dime tu edad");
+
+    let precioEntrada;
 
     if (edad <= 12 ) {
 
-        alert("El precio de tu entrada es: $5")
+        return precioEntrada = "$5";
 
-        }
+    }
 
-        else if(edad <= 17) {
+    else if(edad <= 17) {
 
-            alert("El precio de tu entrada es: $8")
-        
-            }
+        return precioEntrada = "$8";
+    
+    }
 
-        else if(edad <= 64) {
+    else if(edad <= 64) {
 
-            alert("El precio de tu entrada es: $12")
+        return precioEntrada = "$12";
 
-            }
+    }
 
-        else if(edad <= 65) {
+    else if(edad <= 65) {
 
-            alert("El precio de tu entrada es: $6")
-            }
+        return precioEntrada = "$6";
 
-        else{
+    }
 
-            alert("El precio de tu entrada es: $12")
+    else{
 
-        }
+        return precioEntrada = "$12";
+
+    }
+
 }
 
-calcularPrecioEntrada();
+alert("El precio de tu entrada es: " + calcularPrecioEntrada());
