@@ -70,7 +70,7 @@ PISTAS SOLO SI TE TRABAS:
 
 function calcularPrecioEntrada(){
 
-    let edad = prompt("dime tu edad");
+    let edad = prompt("dime tu edad") ?? 64;
 
     let precioEntrada;
 
@@ -92,15 +92,9 @@ function calcularPrecioEntrada(){
 
     }
 
-    else if(edad <= 65) {
+    else if(edad >= 65) {
 
         return precioEntrada = "$6";
-
-    }
-
-    else{
-
-        return precioEntrada = "$12";
 
     }
 
