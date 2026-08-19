@@ -22,7 +22,8 @@ Cualquier otro valor	Opción no válida
 
 TU SCRIPT DEBE:
 
-    1. Pedir al cliente que ingrese un número del 1 al 4 con prompt(), mostrando en el mensaje del prompt las opciones disponibles.
+    1. Pedir al cliente que ingrese un número del 1 al 4 con prompt(), mostrando en el mensaje 
+    del prompt las opciones disponibles.
     
     2. Convertir el valor ingresado a número.
     
@@ -60,3 +61,33 @@ PISTAS SOLO SI TE TRABAS:
 
     3. El default no necesita break si está al final, pero es buena práctica igual ponerlo por claridad.
 */
+
+
+let metodoDePago = prompt("Ingresa un numero:");
+
+let metodoDePagoAnumero = Number(metodoDePago);
+
+let metodosDePagosDisponibles = ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito", "Transferencia bancaria", "Opción no válida"];
+
+switch (metodoDePagoAnumero) {
+    case 1:
+        alert("Pagas con: " + metodosDePagosDisponibles[0]);
+        break;
+
+    case 2:
+        alert("Pagas con: " + metodosDePagosDisponibles[1]);
+        break;
+
+    case 3:
+        alert("Pagas con: " + metodosDePagosDisponibles[2]);
+        break;
+
+    case 4:
+        alert("Pagas con: " + metodosDePagosDisponibles[3]);
+        break;
+
+    default:
+        alert("Pagas con: " + metodosDePagosDisponibles[4]);
+        break;
+
+}
