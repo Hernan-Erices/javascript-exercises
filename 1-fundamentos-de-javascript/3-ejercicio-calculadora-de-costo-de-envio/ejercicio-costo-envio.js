@@ -88,3 +88,54 @@ PISTAS (SOLO SI TE TRABAS):
     
     4. Ojo con el tipo de dato: prompt() para el peso devuelve un string, conviértelo antes de comparar con números.
 */
+
+let region = prompt("Ingresa la region:")
+
+switch(region) {
+    
+    case "norte":
+        costoBase = 3000;
+        break;
+
+    case "centro":
+        costoBase = 2000;
+        break;
+
+    case "sur":
+        costoBase = 3500;
+        break;
+
+    case "Cualquier otro valor":
+        costoBase = "Región no válida";
+        break;
+
+}
+
+if(region = "norte" || "centro" || "sur"){
+
+    let peso = Number(prompt("dime el peso: "));
+
+    if (peso > 15) {
+
+        recargoAdicional = 2500;
+
+    } else if (5 < peso > 15){
+
+        recargoAdicional = 1000;
+
+    } else if (peso < 5) {
+
+        recargoAdicional = 0;
+
+    } else if(region = "centro" && peso < 2){
+
+        envio_gratis = 0;
+    }
+
+    let valor_de_envio_final = costoBase + recargoAdicional;
+
+    alert("El costo de tu envío final es: " + "$" + valor_de_envio_final);
+
+} else {
+    alert("debes selecionar una region valida");
+}
