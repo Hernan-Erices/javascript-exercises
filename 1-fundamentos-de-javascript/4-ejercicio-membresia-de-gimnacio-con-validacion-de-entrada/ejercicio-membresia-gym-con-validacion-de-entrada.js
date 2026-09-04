@@ -1,12 +1,12 @@
 /*
-EJERCICIO 4: Membresía de gimnasio con validación de entrada
+EJERCICIO 4: Membresi�a de gimnasio con validaciion de entrada
 
 DIFICULTAD: (2/5)
 
 OBJETVIO:
 
 Combinar un bucle while para validar la entrada del usuario, switch para asignar un valor según categoría, 
-y if/else con el operador lógico || para aplicar un descuento. Es distinto al ejercicio 3 porque aquí el 
+y if/else con el operador logico || para aplicar un descuento. Es distinto al ejercicio 3 porque aquí el 
 while controla que el usuario no pueda avanzar hasta ingresar un dato válido (en el ejercicio 3 simplemente
 cortabas la ejecución si era inválido).
 
@@ -87,3 +87,42 @@ PISTAS (SOLO SI TE TRABAS):
     4. El switch puede ir después del while, ya que en ese punto tienes la garantía de que el plan es válido.
 
 */
+
+let membresia1 = "basico";
+let membresia2 = "premium";
+let membresia3 = "vip"
+let mencionaTuMembresia;
+let precio;
+
+while(membresia1 || membresia2 || membresia3) {
+
+    mencionaTuMembresia = prompt("Indica tu membresia: ");
+
+}
+
+switch(mencionaTuMembresia){
+
+    case "basico":
+        precio = 15000;
+        break;
+    
+    case "premium":
+        precio = 25000;
+        break;
+
+    case "vip":
+        precio = 40000;
+        break;
+}
+
+let edad = Number(prompt("Dime tu edad"));
+
+
+if (edad > 18 || edad >= 60){
+
+    let descuento = mencionaTuMembresia * 0.2;
+
+} else {
+
+    
+}
