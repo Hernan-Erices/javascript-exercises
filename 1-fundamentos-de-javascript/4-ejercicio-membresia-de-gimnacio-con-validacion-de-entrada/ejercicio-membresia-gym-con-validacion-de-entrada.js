@@ -16,16 +16,16 @@ Un gimnasio quiere un programa para calcular el costo mensual de una membresía.
 
 PASO 1: Validar el plan con un bucle while:
 
-Los planes válidos son (texto exacto, en minúsculas):
+Los planes validos son (texto exacto, en minuscula):
 
 "basico"
 "premium"
 "vip"
 
 Usa un bucle while que siga pidiendo el plan con prompt() mientras el valor ingresado no sea ninguno de los 
-tres planes válidos. El bucle debe repetirse tantas veces como sea necesario hasta que el usuario ingrese un plan correcto.
+tres planes validos. El bucle debe repetirse tantas veces como sea necesario hasta que el usuario ingrese un plan correcto.
 
-PASO 2: Asignar el precio base según el plan (usa switch):
+PASO 2: Asignar el precio base segun el plan (usa switch):
 
 Plan	    Precio base
 "basico"	$15000
@@ -88,41 +88,42 @@ PISTAS (SOLO SI TE TRABAS):
 
 */
 
-let membresia1 = "basico";
-let membresia2 = "premium";
-let membresia3 = "vip"
+let precioBase;
 let mencionaTuMembresia;
-let precio;
 
-while(membresia1 || membresia2 || membresia3) {
+while (!(mencionaTuMembresia == "basico" || mencionaTuMembresia == "premium" || mencionaTuMembresia == "vip")) {
 
-    mencionaTuMembresia = prompt("Indica tu membresia: ");
+    mencionaTuMembresia = prompt("Indica tu membresia (basico, premium, vip):");
 
 }
 
 switch(mencionaTuMembresia){
 
     case "basico":
-        precio = 15000;
+        precioBase = 15000;
         break;
     
     case "premium":
-        precio = 25000;
+        precioBase = 25000;
         break;
 
     case "vip":
-        precio = 40000;
+        precioBase = 40000;
         break;
 }
 
-let edad = Number(prompt("Dime tu edad"));
+let edad = Number(prompt("Dime tu edad: "));
 
+if (edad < 18 || edad >= 60){
 
-if (edad > 18 || edad >= 60){
+    let descuento = precioBase * 0.2;
+    let precioConDescuento = precioBase - descuento;
 
-    let descuento = mencionaTuMembresia * 0.2;
+    alert("Tu memebresia " + mencionaTuMembresia + " Cuesta: $" + precioConDescuento);
 
 } else {
+
+    alert("Tu memebresia " + mencionaTuMembresia + " Cuesta: $" + precioBase)
 
     
 }
